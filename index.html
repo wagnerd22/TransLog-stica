@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransLogística - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à TransLogística!</h1>
+        <p>Seu parceiro confiável em transporte e logística.</p>
+    </header>
+
+    <div class="container">
+        <div class="card" onclick="openModal('sobreModal')">Sobre</div>
+        <div class="card" onclick="openModal('swotModal')">Análise SWOT</div>
+        <div class="card" onclick="openModal('parceirosModal')">Parceiros</div>
+        <div class="card" onclick="openModal('servicosModal')">Serviços</div>
+        <div class="card" onclick="openModal('contatoModal')">Contato</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 TransLogística. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="sobreModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sobreModal')">&times;</span>
+            <h2>Sobre a TransLogística</h2>
+            <p><strong>Missão:</strong> Prestar, com excelência, serviço de transporte com qualidade e eficiência.</p>
+            <p><strong>Visão:</strong> Ser uma empresa consolidada no setor logístico com qualidade total.</p>
+            <p><strong>Valores:</strong> Ética, comprometimento, organização, profissionalismo, responsabilidade ambiental e transparência.</p>
+            <img src="https://www.iped.com.br/_upload/content/2015/01/24/3-ingredientes-empresa-sucesso.jpg">
+        </div>
+    </div>
+
+    <div id="swotModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('swotModal')">&times;</span>
+            <h2>Análise SWOT</h2>
+            <ul>
+                <li><strong>Forças:</strong> Frota moderna, equipe treinada, parcerias sólidas.</li>
+                <li><strong>Fraquezas:</strong> Dependência de poucos fornecedores.</li>
+                <li><strong>Oportunidades:</strong> Crescimento do e-commerce.</li>
+                <li><strong>Ameaças:</strong> Concorrência acirrada.</li>
+            </ul>
+            <img src="https://lh3.googleusercontent.com/t5HLB5XOGzYWq9lY0PuSi-0SH8w-pkZP1yKZaD_JLqy7gIKsKc4tgcm47984iaSIV2v-i68Cvk-f7o8cTAmdZopci6_LJkm36H7vIyGLWyTe0N5QQ_BdKqVKNBukoA" alt="Imagem SWOT" class="modal-image">
+        </div>
+    </div>
+
+    <div id="parceirosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('parceirosModal')">&times;</span>
+            <h2>Parceiros da TransLogística</h2>
+            <p>Trabalhamos com os melhores fornecedores e empresas do setor para garantir um serviço de qualidade.</p>
+            <ul>
+                <li>Orsi Logística</li>
+                <li>Seara</li>
+                <li>JBS</li>
+                <li>Ambev</li>
+            </ul>
+            <img src="https://www.busup.com/hubfs/Imported_Blog_Media/iStock-1204743098.jpg", alt="Imagem de parceiros" class="modal-image">
+        </div>
+    </div>
+
+    <div id="servicosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('servicosModal')">&times;</span>
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li>Transporte de cargas gerais</li>
+                <li>Transporte de cargas pesadas</li>
+                <li>Logística integrada</li>
+                <li>Entrega expressa</li>
+                <li>Transporte de cargas especiais</li>
+            </ul>
+            <img src="https://www.totvs.com/wp-content/uploads/2019/09/gestao-de-servicos-como-otimizar.jpg" alt="Imagem de serviços" class="modal-image">
+        </div>
+    </div>
+
+    <div id="contatoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contatoModal')">&times;</span>
+            <h2>Contato</h2>
+            <p>Preencha o formulário em nosso site ou ligue para nós!</p>
+            <p>Email: contato@translogistica.com</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBx-dJuPNKnC4I9a89VwonIFc2Tj2toLQcFg&s" alt="Imagem de contato" class="modal-image">
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
